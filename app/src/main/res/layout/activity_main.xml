@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi Calculadora"
+        android:textStyle="bold|italic"
+        android:textColor="#EE6AFD"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/inputOne"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:id="@+id/options"
+            android:textAlignment="center"
+            android:prompt="@string/opt"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            />
+
+        <EditText
+            android:id="@+id/inputTwo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="0"
+            android:background="@null"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textSize="15sp" />
+</LinearLayout>
