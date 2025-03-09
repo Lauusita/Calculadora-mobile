@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         inputTwo = findViewById(R.id.inputTwo);
         result = findViewById(R.id.result);
         calculate = findViewById(R.id.calculate);
+        String[] v = {"+", "-", "x", "÷"};
+
         values = List.of("+", "-", "x", "÷");
 
         spinner = (Spinner) findViewById(R.id.options);
