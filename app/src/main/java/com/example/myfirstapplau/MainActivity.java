@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         inputTwo = findViewById(R.id.inputTwo);
         result = findViewById(R.id.result);
         calculate = findViewById(R.id.calculate);
-        String[] v = {"+", "-", "x", "÷"};
 
         values = List.of("+", "-", "x", "÷");
 
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         String opt = spinner.getSelectedItem().toString();
 
         if (num1.isEmpty() || num2.isEmpty()) {
-            Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Los valores no pueden ser vacíos", Toast.LENGTH_LONG).show();
         } else {
             switch (opt) {
                 case "+":
@@ -105,9 +104,14 @@ public class MainActivity extends AppCompatActivity {
                     return;
 
                 case "÷":
+                    if (num2.equals("0")) {
+                        Toast.makeText(this, "No es posible dividir entre 0", Toast.LENGTH_SHORT).show();
+                        result.setText("0");
+                        inputTwo.setText("");
+                        return;
+                    }
                     resultado = Float.parseFloat(num1) / Float.parseFloat(num2);
                     result.setText(resultado+"");
-                    return;
             }
         }
     }
